@@ -1,0 +1,16 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn==1.8.0
+imbalanced-learn
+xgboost
+shap
+mlflow
+fastapi
+uvicorn
+pydantic
+joblib
+python-multipart
+jupyter
+ipykernel
