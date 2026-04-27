@@ -1,53 +1,54 @@
 # Fraud Detection MLOps Pipeline
 
+End-to-end machine learning project for detecting fraudulent credit card transactions using Python, XGBoost, SMOTE, FastAPI, Docker, and Tableau dashboard.
+
+---
+
 ## Project Overview
 
-Fraud Detection MLOps Pipeline adalah project end-to-end untuk mendeteksi transaksi fraud menggunakan Machine Learning. Project ini tidak hanya berfokus pada pembuatan model, tetapi juga mencakup proses data analysis, feature engineering, handling imbalanced data, model evaluation, API deployment menggunakan FastAPI, Docker containerization, dan dashboard monitoring.
+Fraud Detection MLOps Pipeline is an end-to-end data science and machine learning project designed to detect fraudulent credit card transactions.
 
-Project ini dibuat sebagai portfolio Data Scientist / Machine Learning Engineer untuk menunjukkan kemampuan membangun solusi machine learning dari tahap eksplorasi data sampai deployment.
+This project covers the complete workflow from exploratory data analysis, feature engineering, handling imbalanced data, model training, model evaluation, API deployment using FastAPI, Docker containerization, and dashboard monitoring.
+
+The goal of this project is not only to build a machine learning model, but also to prepare the model for real-world usage through an API and business dashboard.
 
 ---
 
 ## Business Problem
 
-Fraud pada transaksi keuangan dapat menyebabkan kerugian besar bagi perusahaan. Ketika volume transaksi tinggi, proses pengecekan manual menjadi tidak efisien dan sulit dilakukan secara real-time.
+Financial fraud can cause significant losses for companies. When transaction volume is high, manual fraud checking becomes inefficient and difficult to perform in real time.
 
-Oleh karena itu, dibutuhkan sistem deteksi fraud yang dapat membantu perusahaan mengidentifikasi transaksi mencurigakan secara cepat, memberikan prioritas risiko, dan membantu fraud analyst mengambil keputusan bisnis dengan lebih tepat.
+A machine learning fraud detection system can help companies identify suspicious transactions faster and prioritize transactions that require manual review or additional verification.
 
 ---
 
-## Objective
+## Project Objectives
 
-Tujuan project ini adalah membangun sistem Machine Learning untuk mengklasifikasikan transaksi menjadi:
+The objectives of this project are:
 
-- `0` = Normal Transaction
-- `1` = Fraud Transaction
-
-Output akhir model:
-
-- Fraud probability
-- Predicted class
-- Risk category
-- Business recommendation
+- Build a machine learning model to detect fraudulent transactions.
+- Handle highly imbalanced fraud data.
+- Compare several machine learning models.
+- Evaluate the model using metrics suitable for imbalanced classification.
+- Deploy the model using FastAPI.
+- Containerize the API using Docker.
+- Create dashboard-ready prediction output for business monitoring.
 
 ---
 
 ## Tech Stack
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Imbalanced-learn / SMOTE
-- XGBoost
-- FastAPI
-- Uvicorn
-- Docker
-- Joblib
-- Tableau
-- Git & GitHub
+| Category | Tools |
+|---|---|
+| Programming | Python |
+| Data Processing | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn, XGBoost |
+| Imbalanced Data Handling | SMOTE |
+| API Deployment | FastAPI, Uvicorn |
+| Containerization | Docker |
+| Dashboard | Tableau |
+| Version Control | Git, GitHub |
 
 ---
 
@@ -59,31 +60,14 @@ fraud-detection-mlops/
 ├── api/
 │   └── main.py
 │
-├── dashboard/
-│   └── fraud_dashboard.twbx
-│
-├── data/
-│   ├── raw/
-│   │   └── creditcard.csv
-│   └── processed/
-│       ├── fraud_clean.csv
-│       ├── fraud_prediction_result.csv
-│       └── fraud_dashboard_data.csv
-│
-├── images/
-│   ├── api_swagger.png
-│   ├── api_prediction_response.png
-│   └── dashboard_preview.png
-│
-├── models/
-│   ├── fraud_model.pkl
-│   ├── scaler.pkl
-│   └── feature_names.pkl
-│
 ├── notebooks/
 │   ├── 01_eda.ipynb
-│   ├── 02_modeling.ipynb
-│   └── 03_explainability.ipynb
+│   └── 02_modeling.ipynb
+│
+├── src/
+│   ├── preprocessing.py
+│   ├── train_model.py
+│   └── predict.py
 │
 ├── reports/
 │   ├── confusion_matrix.png
@@ -93,12 +77,24 @@ fraud-detection-mlops/
 │   ├── feature_importance.csv
 │   └── model_comparison.csv
 │
-├── src/
-│   ├── preprocessing.py
-│   ├── train_model.py
-│   └── predict.py
+├── images/
+│   ├── dashboard_preview.png
+│   ├── api_swagger.png
+│   └── api_prediction_response.png
+│
+├── dashboard/
+│   └── dashboard_link.txt
+│
+├── data/
+│   ├── raw/
+│   │   └── README.md
+│   └── processed/
+│       └── README.md
+│
+├── models/
+│   └── README.md
 │
 ├── Dockerfile
-├── README.md
 ├── requirements.txt
+├── README.md
 └── .gitignore
